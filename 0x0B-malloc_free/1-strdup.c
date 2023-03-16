@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -14,22 +13,20 @@ char *_strdup(char *str)
 
 	char *aaa;
 
-	int i, r = 0;
+	int i, len = 0;
 
 
 	if (str == NULL)
 
 		return (NULL);
 
-	i = 0;
+	while (str[len] != '\0')
 
-	while (str[i] != '\0')
-
-		i++;
+		len++;
 
 
 
-	aaa = malloc(sizeof(char) * (i + 1));
+	aaa = (char *)malloc((sizeof(char) * len) + 1);
 
 
 	if (aaa == NULL)
@@ -38,10 +35,10 @@ char *_strdup(char *str)
 
 
 
-	for (r = 0; str[r]; r++)
+	for (r = 0; i < len; i++)
 
-		aaa[r] = str[r];
-
+		aaa[i] = str[i];
+	aaa[len] = '\0';
 
 
 	return (aaa);
