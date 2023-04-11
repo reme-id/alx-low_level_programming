@@ -1,8 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
 
-#define create_buffer 1024
+
 
 char *create_buffer(char *file);
 void close_file(int fd);
