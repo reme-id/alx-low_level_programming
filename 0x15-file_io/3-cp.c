@@ -2,11 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define create_buffer 1024
+
 char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * create_buff - Allocates 1024 bytes for a buff.
+ * create_buffer -  Allocates 1024 bytes for a buff.
  * @file: Name of the file buff is storing chars for.
  *
  * Return: Pointer to allocated buff.
